@@ -1,4 +1,5 @@
 #ifndef HEADER_FILE
+#define HEADER_FILE
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
