@@ -1,7 +1,4 @@
-#ifndef HOLBERTON_H_HEADER
-#define HOLBERTON_H_HEADER
-
-int _putchar(char c);
+#ifndef HEADER_FILE
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
