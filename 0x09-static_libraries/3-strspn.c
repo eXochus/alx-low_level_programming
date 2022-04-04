@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strspn - returns number of bytes in the initial sengment s
@@ -10,23 +9,15 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int num;
-	int i, j, t;
+	unsigned int i, j;
 
-	i = 0;
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		t = 0;
-		for (j = 0; accept[j] != '\0'; j++)
-		{
-			if (s[i] == accept[j])
-				t = 1;
+		for (j = 0; accept[j] != s[i]; j++)
+	        {
+			if (accept[j] == '\0')
+				return (i);
 		}
-		j = 0;
-		if (t == 0)
-			break;
-		num++;
-		i++;
 	}
 	return (i);
 }
