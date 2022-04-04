@@ -1,23 +1,24 @@
 #include "main.h"
-
 /**
- * _strspn - returns number of bytes in the initial sengment s
- * @s: for the count action
- * @accept: parameter for char
- * Return: number of bytes;
+ * _strspn - prints the consecutive characters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (j = 0; *(s + j); j++)
 	{
-		for (j = 0; accept[j] != s[i]; j++)
-	        {
-			if (accept[j] == '\0')
-				return (i);
+		for (i = 0; *(accept + i); i++)
+		{
+			if (*(s + j) == *(accept + i))
+				break;
 		}
+	if (*(accept + i) == '\0')
+		break;
 	}
-	return (i);
+	return (j);
 }

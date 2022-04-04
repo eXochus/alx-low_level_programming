@@ -1,30 +1,29 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _strpbrk - locates the first occurrence in the string s of any
- * of the bytes in the string accept
- * @s: for the char
- * @accept: paramter for accept
- * Return: pointer to the byte s
+ * _strpbrk - prints the consecutive characters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int i, t, j;
+	unsigned int i, j;
 
-	i = 0;
-	while (s[i] != '\0')
+	for (i = 0; *(s + i); i++)
 	{
-		t = 0;
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; *(accept + j); j++)
 		{
-			if (s[i] == accept[j])
-				t = 1;
+			if (*(s + i) == *(accept + j))
+			{
+				break;
+			}
 		}
-		j = 0;
-		if (t == 1)
+		if (*(accept + j) != '\0')
+		{
 			return (s + i);
-		i++;
+		}
 	}
 	return (0);
 }

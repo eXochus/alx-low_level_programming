@@ -1,20 +1,19 @@
 #include "main.h"
 /**
- * _memset - check the code for Holberton School students.
- * @s: parameter for the array
- * @b: parameter for the values in the array
- * @n: parameter for the number of times to print the new values
- * Return: Always 0.
+ * _memset - fills memory with a constant byte.
+ * @s: source string
+ * @b: the contant byte for filling
+ * @n: lenght of buffer
+ * Return: new string.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int a = 0;
+	unsigned int i = 0;
 
-	while (a < n)
+	while (i < n)
 	{
-		s[a] = b;
-		a++;
+		*(s + i) = b;
+		i++;
 	}
-
 	return (s);
 }
