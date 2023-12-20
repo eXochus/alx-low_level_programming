@@ -15,7 +15,10 @@ int _islower(int c)
 	for (i = 97; i <= 122; i++)
 	{
 		if (i == c)
+		{
 			result = 1;
+			break;
+		}
 		else
 			result = 0;
 	}
