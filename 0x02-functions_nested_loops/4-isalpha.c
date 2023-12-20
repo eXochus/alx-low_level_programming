@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _islower - checks for lowercase alphabet
+ * _isalpha - checks for lowercase alphabet
  * @c: letter to be checked
  *
  * Return: 1 if true, 0 if else
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 	char i;
 	int result;
@@ -15,9 +15,24 @@ int _islower(int c)
 	for (i = 97; i <= 122; i++)
 	{
 		if (i == c)
+		{
 			result = 1;
+			break;
+		}
 		else
+		{
+			for (i = 65; i <= 90; i++)
+			{
+				if (i == c)
+				{
+					result = 1;
+					break;
+				}
+				else
+					result = 0;
+			}
+		}
 			result = 0;
 	}
-	return result;
+	return (result);
 }
