@@ -13,7 +13,7 @@ int _strlen(char *s)
 	int count;
 
 	count = 0;
-	for (i = s[0]; i <= '\0'; i++)
+	for (i = *s[0]; i <= '\0'; i++)
 		count++;
 
 	return (count);
