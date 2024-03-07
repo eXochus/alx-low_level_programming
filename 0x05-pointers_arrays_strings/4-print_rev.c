@@ -1,16 +1,29 @@
 #include "main.h"
 
 /**
- * print_rev- print strings to the stdout in reverse order
- * @s: the string to be printed
+ * print_rev - Prints a string in reverse order.
+ * @s: The string to be printed.
  *
- * Return: nothing
+ * Return: Void (no return value).
  */
-
-void print_rev(char *s)
+void print_rev(char *s) 
 {
-	char *i;
+    int len = 0;
+    int i;
 
-	for (i = s; *i != '\0'; i++)
-		_putchar(*i);
+    while (*s != '\0') 
+    {  
+        len++;
+        s++;
+    }
+
+    s--;
+
+    for (i = len - 1; i >= 0; i--) 
+    {
+        _putchar(s[i]);
+    }
+
+    _putchar('\n');
 }
+
