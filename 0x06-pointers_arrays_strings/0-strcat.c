@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _strcpy - copies a string from a pointer to a buffer
- * @dest: buffer to be copied to
- * @src: source of the string to be copied
+ * _strcat - concatenates two stings
+ * @dest: string to be added to
+ * @src: strng to be added
  *
  * Return: dest.
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int i;
 
