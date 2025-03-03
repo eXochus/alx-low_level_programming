@@ -4,6 +4,7 @@
  * _strncat - concatenates two stings
  * @dest: string to be added to
  * @src: strng to be added
+ * @n: the number of string to be used in src
  *
  * Return: dest.
  */
