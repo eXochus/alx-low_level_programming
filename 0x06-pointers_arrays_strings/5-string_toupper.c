@@ -6,8 +6,7 @@
  *
  * Return: return array of strings
  */
-
-char *string_toupper (char *s)
+char *string_toupper(char *s)
 {
 	int i;
 	char j;
