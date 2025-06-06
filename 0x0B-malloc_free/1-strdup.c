@@ -17,6 +17,8 @@ char *_strdup(char *str)
 	if (size == 0)
 		return (NULL);
 	create = malloc(sizeof(char) * size);
+	if (create == NULL)
+		return (NULL);
 	for (count = 0; count <= size; count++)
 		create[count] = str[count];
 	return (create);
