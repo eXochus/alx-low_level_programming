@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (count1 = 0; count1 < size; count1++)
 		concat[count1] = s1[count1];
-	if (n >= size2)
+	if (size2 <= n)
 	{
 		for (count2 = 0; count2 < size2; count2++, count1++)
 			concat[count1] = s2[count2];
