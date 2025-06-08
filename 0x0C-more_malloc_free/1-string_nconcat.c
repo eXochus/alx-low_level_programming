@@ -18,6 +18,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int count1;
 	unsigned int count2;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	size = _strlen(s1);
 	size2 = _strlen(s2);
 	concat = malloc(sizeof(char) * (size + n + 1));
