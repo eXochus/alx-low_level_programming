@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - create an array and initializes to a certain character
+ * string_nconcat - create an array and initializes to a certain character
  * @s1: first string
  * @s2: second string
  * @n: number of string to copy from s2
