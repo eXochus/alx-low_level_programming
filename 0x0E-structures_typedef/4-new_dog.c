@@ -15,16 +15,19 @@ int _strlen(char *s)
 {
 	int len;
 
-	for (len = 0; s[len] != '\0'; len++)
-		;
+	len = 0;
+	while (s[len] != '\0')
+		len++;
 	return (len);
 }
 
 char *_strcpy(char *dest, char *src)
 {
-	int len;
-	for (len = 0; src[len] != '\0'; len++)
-		dest[len] = src[len];
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -54,8 +57,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(namem);
 		return (NULL);
 	}
-	namem = _strcpy(namem, name);
-	ownerm = _strcpy(ownerm, owner);
+	_strcpy(namem, name);
+	_strcpy(ownerm, owner);
 	the_dog->name = namem;
 	the_dog->age = age;
 	the_dog->owner = ownerm;
