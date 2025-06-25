@@ -1,16 +1,12 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * new_dog - creates new dog from the given parameters
- * @name: of dog to be created
- * @age: age of dog to be created
- * @owner: of dog to be created 
+ * _strlen - calculate the length of a string
+ * @s: string whose length is to be calculated
  *
- * Return: dog instance
+ * Return: the len
  */
-
 int _strlen(char *s)
 {
 	int len;
@@ -20,7 +16,13 @@ int _strlen(char *s)
 		len++;
 	return (len);
 }
-
+/**
+ * _strcpy - copy one string to another
+ * @dest: to be copied
+ * @src: to be copied to
+ *
+ * Return: dog instance
+ */
 char *_strcpy(char *dest, char *src)
 {
 	int i;
@@ -30,7 +32,14 @@ char *_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
+/**
+ * new_dog - creates new dog from the given parameters
+ * @name: of dog to be created
+ * @age: age of dog to be created
+ * @owner: of dog to be created 
+ *
+ * Return: dog instance
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *the_dog;
