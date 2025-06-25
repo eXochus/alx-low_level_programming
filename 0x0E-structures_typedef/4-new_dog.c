@@ -17,11 +17,11 @@ int _strlen(char *s)
 	return (len);
 }
 /**
- * _strcpy - copy one string to another
- * @dest: to be copied
- * @src: to be copied to
+ * _strcpy - calculate the length of a string
+ * @dest: string whose length is to be calculated
+ * @src: string to copy from
  *
- * Return: dog instance
+ * Return: the len
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -33,12 +33,12 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * new_dog - creates new dog from the given parameters
- * @name: of dog to be created
- * @age: age of dog to be created
- * @owner: of dog to be created 
+ * new_dog - calculate the length of a string
+ * @name: string whose length is to be calculated
+ * @age: age of dog
+ * @owner: owner of dog
  *
- * Return: dog instance
+ * Return: the len
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
