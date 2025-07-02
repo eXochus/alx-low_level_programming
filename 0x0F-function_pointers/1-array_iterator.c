@@ -14,14 +14,9 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t counter;
 
-	if (array == NULL)
+	if (array != NULL && action != NULL)
 	{
-		;
+		for (counter = 0; counter < size; counter++)
+			action(array[counter]);
 	}
-	if (action == NULL)
-	{
-		;
-	}
-	for (counter = 0; counter < size; counter++)
-		action(array[counter]);
 }
