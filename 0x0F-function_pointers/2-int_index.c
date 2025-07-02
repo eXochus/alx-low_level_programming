@@ -24,5 +24,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 				return (counter);
 		}
 	}
-	return (counter);
+	return (-1);
 }
