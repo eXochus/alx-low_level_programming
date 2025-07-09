@@ -25,17 +25,18 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
-	if (strcmp(op, "+") != 0 && strcmp(op, "-") != 0 && strcmp(op, "*") != 0 && strcmp(op, "/") != 0 && strcmp(op, "%") != 0)
+	if (strcmp(op, "+") != 0 && strcmp(op, "-") != 0 && strcmp(op, "*") != 0 &&
+			strcmp(op, "/") != 0 && strcmp(op, "%") != 0)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	if ((strcmp(op, "/") || strcmp(op, "%")) && b == 0)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 	run = get_op_func(op);
 	result = run(a, b);
