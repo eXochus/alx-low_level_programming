@@ -8,13 +8,12 @@
  *
  * Return: returns the sum of everything
  */
-
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list the_num;
 	unsigned int count;
 	int result;
-	
+
 	result = 0;
 	count = 0;
 	if (n == 0)
