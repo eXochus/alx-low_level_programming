@@ -25,7 +25,7 @@ void print_all(const char * const format, ...)
 	va_start(the_all, format);
 	if (format == NULL)
 	{
-		;
+		printf("\n");
 	}
 	while (format[count] != '\0')
 	{
@@ -50,7 +50,7 @@ void print_all(const char * const format, ...)
 				c_string = va_arg(the_all, char *);
 				if (c_string == NULL)
 				{
-					printf("nil");
+					printf("(nil)");
 					break;
 				}
 				printf("%s", c_string);
