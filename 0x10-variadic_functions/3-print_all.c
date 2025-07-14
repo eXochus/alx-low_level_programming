@@ -3,34 +3,57 @@
 #include <stdio.h>
 
 /**
- * print_strings - print strings given
- * @separator: the string to be printed between numbers
- * @n: number of times
+ * print_all - print any argument passed to it
+ * @format: the formats of the arguments in order
  * @...: variadic variable
  *
  * Return: returns nothing
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-	va_list the_string;
-	unsigned int count;
+	va_list the_all;
+	int count;
+	char c_char;
+	int c_int;
+	double c_float;
+	char *c_string;
+	char *separator;
+	char c_arg;
 
 	count = 0;
-	if (n == 0)
+	separator = "";
+	va_start(the_all, format);
+	while (format[count] != '\0')
 	{
-		;
-	}
-	va_start(the_string, n);
-	while (count < n)
-	{
-		printf("%s", va_arg(the_string, char *));
-		if (separator != NULL)
+		c_arg = format[count];
+		printf("%s", separator);
+		separator = ", ";
+		switch (c_arg)
 		{
-			if (count < (n - 1))
-				printf("%s", separator);
+			case 'c':
+				c_char = va_arg(the_all, int);
+				printf("%c", c_char);
+				break;
+			case 'i':
+				c_int = va_arg(the_all, int);
+				printf("%d", c_int);
+				break;
+			case 'f':
+				c_float = va_arg(the_all, double);
+				printf("%f", c_float);
+				break;
+			case 's':
+				c_string = va_arg(the_all, char *);
+				if (c_string == NULL)
+					printf("nil");
+				printf("%s", c_string);
+				break;
+			default:
+				separator = "";
+				break;
 		}
 		count++;
 	}
 	printf("\n");
-	va_end(the_string);
+	va_end(the_all);
 }
