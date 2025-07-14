@@ -23,6 +23,10 @@ void print_all(const char * const format, ...)
 	count = 0;
 	separator = "";
 	va_start(the_all, format);
+	if (format == NULL)
+	{
+		;
+	}
 	while (format[count] != '\0')
 	{
 		c_arg = format[count];
@@ -45,7 +49,10 @@ void print_all(const char * const format, ...)
 			case 's':
 				c_string = va_arg(the_all, char *);
 				if (c_string == NULL)
+				{
 					printf("nil");
+					break;
+				}
 				printf("%s", c_string);
 				break;
 			default:
