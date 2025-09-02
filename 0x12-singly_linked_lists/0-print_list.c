@@ -24,10 +24,29 @@ size_t print_list(const list_t *h)
 			temp = temp->next;
 			i++;
 		}
-		strln = strlen(temp->str);
+		strln = _strlen(temp->str);
 		printf("[%d] %s\n", strln, temp->str);
 		temp = temp->next;
 		i++;
 	}
 	return (i);
+}
+/**
+ * _strlen - counts the length of a string
+ * @s: the string to be counted
+ *
+ * Return: nothing
+ */
+
+int _strlen(char *s)
+{
+	char *i;
+	int count;
+
+	count = 0;
+	for (i = s; *i != '\0'; i++)
+		count++;
+
+	return (count);
+
 }
