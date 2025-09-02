@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * print_list - print linked lists
+ * print_listint - print linked lists
  * @h: the head of the list
  *
  * Return: returns nothing
